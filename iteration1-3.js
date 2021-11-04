@@ -46,12 +46,8 @@ function botonClick(event){
         crearDiv.appendChild(botonRemove)
         function botonRemove2 (event) {
             console.log('funcion de borrado')
-            //let elemento = document.querySelector(`button.carlos`)
             console.log(document.getElementById(data.name))
             document.getElementById(data.name).remove()
-            // let parentElement = botonRemove.parentNode;
-            // document.getElementById(data.name).remove();
-            // console.log(document.getElementById(data.name))
         }
         document.getElementById(data.name).addEventListener('click', botonRemove2)
         console.log('textoPrint: ', textoPrint)
@@ -60,7 +56,6 @@ function botonClick(event){
     let valueInput = document.querySelector('input')
     valueInput.value = null;
 }
-
 document.querySelector('button').addEventListener('click',botonClick)
 document.addEventListener('keydown', (event) => {
     const keyName = event.key;
