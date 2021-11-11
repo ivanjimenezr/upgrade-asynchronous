@@ -13,15 +13,12 @@ const runTimeOut = () => {
 
 runTimeOut();*/
 
-async function runTimeOut () {
-    const promise = new Promise((resolve) => {
-        setTimeout(function () {
-            resolve('Salida buena');
-        }, 2000);
-    })
-    let result = await promise
-    console.log(result);
-};
+let runTimeOut = async () =>{
+    setTimeout(await function (){
+    console.log('Time out!')
+    }, 2000);
+    console.log('test')
+}
 runTimeOut();
 
 /* 2.2 Convierte la siguiente función con un fetch utilizando async-await. 
